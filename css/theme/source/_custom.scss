@@ -1,0 +1,301 @@
+
+// Filthy hack
+.slide-background[data-background-hash^=pareto] {
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        color: $backgroundColor;
+        font-weight: bold;
+        font-size: 4em;
+        text-align: center;
+        background-color: $headingColor;
+    }
+    &:before {
+        left: 0;
+        right: 20%;
+        background: #81A9D5;
+        -webkit-animation: pareto-80 10s infinite alternate ease-in-out;
+        -moz-animation: pareto-80 10s infinite alternate ease-in-out;
+        -ms-animation: pareto-80 10s infinite alternate ease-in-out;
+        -o-animation: pareto-80 10s infinite alternate ease-in-out;
+        animation: pareto-80 10s infinite alternate ease-in-out;
+    }
+
+    &:after {
+        right: 0;
+        left: 80%;
+        background: #8CD9A1;
+        -webkit-animation: pareto-20 10s infinite alternate ease-in-out;
+        -moz-animation: pareto-20 10s infinite alternate ease-in-out;
+        -ms-animation: pareto-20 10s infinite alternate ease-in-out;
+        -o-animation: pareto-20 10s infinite alternate ease-in-out;
+        animation: pareto-20 10s infinite alternate ease-in-out;
+    }
+}
+
+@-webkit-keyframes pareto-80 {
+    0% {
+        right: 20%;
+    }
+    45% {
+        right: 20%;
+    }
+    55% {
+        right: 80%;
+    }
+    100% {
+        right: 80%;
+    }
+}
+@-moz-keyframes pareto-80 {
+    0% {
+        right: 20%;
+    }
+    45% {
+        right: 20%;
+    }
+    55% {
+        right: 80%;
+    }
+    100% {
+        right: 80%;
+    }
+}
+@-ms-keyframes pareto-80 {
+    0% {
+        right: 20%;
+    }
+    45% {
+        right: 20%;
+    }
+    55% {
+        right: 80%;
+    }
+    100% {
+        right: 80%;
+    }
+}
+@-o-keyframes pareto-80 {
+    0% {
+        right: 20%;
+    }
+    45% {
+        right: 20%;
+    }
+    55% {
+        right: 80%;
+    }
+    100% {
+        right: 80%;
+    }
+}
+@keyframes pareto-80 {
+    0% {
+        right: 20%;
+    }
+    45% {
+        right: 20%;
+    }
+    55% {
+        right: 80%;
+    }
+    100% {
+        right: 80%;
+    }
+}
+
+@-webkit-keyframes pareto-20 {
+    0% {
+        left: 80%;
+    }
+    45% {
+        left: 80%;
+    }
+    55% {
+        left: 20%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+@-moz-keyframes pareto-20 {
+    0% {
+        left: 80%;
+    }
+    45% {
+        left: 80%;
+    }
+    55% {
+        left: 20%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+@-ms-keyframes pareto-20 {
+    0% {
+        left: 80%;
+    }
+    45% {
+        left: 80%;
+    }
+    55% {
+        left: 20%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+@-o-keyframes pareto-20 {
+    0% {
+        left: 80%;
+    }
+    45% {
+        left: 80%;
+    }
+    55% {
+        left: 20%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+@keyframes pareto-20 {
+    0% {
+        left: 80%;
+    }
+    45% {
+        left: 80%;
+    }
+    55% {
+        left: 20%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+
+
+
+.god-damn-pop-ups {
+    display: block;
+    position: absolute;
+    background: darken($backgroundColor, 4%);
+    padding: 2em 3em !important;
+    border-radius: 5px;
+    border: 1px solid darken($backgroundColor, 30%) !important;
+    border-top-width: 21px !important;
+    box-shadow: 0 0 21px rgba(0,0,0,.3);
+    font-weight: bold;
+}
+
+.god-damn-pop-ups--1 {
+    @extend .god-damn-pop-ups;
+    left: 5%;
+    top: 5%;
+}
+
+.god-damn-pop-ups--2 {
+    @extend .god-damn-pop-ups;
+    right: 32%;
+    bottom: 3%;
+}
+
+.god-damn-pop-ups--3 {
+    @extend .god-damn-pop-ups;
+    top: 40%;
+    left: 15%;
+}
+
+.god-damn-pop-ups--4 {
+    @extend .god-damn-pop-ups;
+    right: 23%;
+    bottom: 30%;
+}
+
+.screen-size-example {
+    position: relative;
+}
+
+.screen-size-example__cover {
+    display: block;
+    position: absolute;
+    background-color: $backgroundColor;
+    left: 0;
+    right: 0;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 12px !important;
+    .screen-size-example__percentage {
+        margin-top: -6px;
+    }
+    line-height: 1 !important;
+    vertical-align: middle;
+    overflow: hidden;
+    color: darken($backgroundColor, 20%);
+}
+
+.screen-size-example__cover--menubar {
+    @extend .screen-size-example__cover;
+    top: 0;
+    height: 2.6%;
+}
+
+.screen-size-example__cover--chrome {
+    @extend .screen-size-example__cover;
+    top: 2.6%;
+    height: 8.6%;
+}
+
+.screen-size-example__cover--bookmarks {
+    @extend .screen-size-example__cover;
+    top: 8.6% + 2.6%;
+    height: 3.5%;
+}
+
+.screen-size-example__cover--dock {
+    @extend .screen-size-example__cover;
+    bottom: 0;
+    height: 10.7%;
+}
+
+.screen-size-example__remainder {
+    display: block;
+    position: absolute;
+    background-color: rgba($backgroundColor, .5);
+    left: 0;
+    right: 0;
+    // padding: 0.5em;
+    text-align: center;
+    // font-size: 12px !important;
+    // line-height: 1 !important;
+    vertical-align: middle;
+    overflow: hidden;
+    // color: darken($main, 20%);
+    height: 100% - 2.6% - 8.6% - 3.5% - 10%;
+    bottom: 10.7%;
+
+    .screen-size-example__percentage {
+        font-size: 40px;
+        margin-top: -20px;
+        font-weight: bold;
+    }
+}
+
+.screen-size-example__percentage {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.invert-text {
+    color: $backgroundColor;
+    text-shadow: 3px 3px 0 $headingColor, 0 0 120px rgba($headingColor, .5);
+}
