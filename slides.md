@@ -212,6 +212,18 @@ Note:
 - Recommend oh-my-zsh and oh-my-fish for some nice defaults
 
 
+### Terminal programs
+
+<h4 class="fragment">Music - ncmpcpp</h4>
+<h4 class="fragment">Mail - mutt</h4>
+<h4 class="fragment">File Explorer - ranger / mc</h4>
+<h4 class="fragment">Archives - extract function</h4>
+<h4 class="fragment">Editors - vim / neovim</h4>
+
+Note:
+- Terminal programs are often better than GUI based alternatives
+
+
 ### Automate
 
 <h4 class="fragment">JavaScript task runners are pretty cool</h4>
@@ -219,6 +231,11 @@ Note:
 
 Note:
 - Task runners let you automate menial development tasks like concatenation or image optimisation
+
+
+### DuckDuckGo
+
+#### !awesome
 
 
 ### Spend the time to customize
