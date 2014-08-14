@@ -299,3 +299,120 @@
     color: $backgroundColor;
     text-shadow: 3px 3px 0 $headingColor, 0 0 120px rgba($headingColor, .5);
 }
+
+.personal-slant {
+    // transition: transform .5s;
+    display: inline-block;
+
+    section.present > & {
+        // transform: rotate(-7deg);
+        // transform-origin: top right;
+        -webkit-animation: hinge 2s forwards 4s;
+        animation: hinge 3s forwards 4s;
+    }
+}
+
+@mixin slanty($deg) {
+    -webkit-transform: rotate3d(0, 0, 1, $deg);
+    transform: rotate3d(0, 0, 1, $deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes hinge {
+    0% {
+        @include slanty(0deg);
+    }
+    10% {
+        @include slanty(100deg);
+    }
+
+    20% {
+        @include slanty(50deg);
+    }
+
+    30% {
+        @include slanty(96deg);
+    }
+
+    40% {
+        @include slanty(60deg);
+    }
+
+    50% {
+        @include slanty(93deg);
+    }
+
+    60% {
+        @include slanty(73deg);
+    }
+
+    74% {
+        @include slanty(89deg);
+    }
+
+    86% {
+        @include slanty(80deg);
+    }
+
+    100% {
+        @include slanty(88deg);
+    }
+}
+
+@keyframes hinge {
+    0% {
+        @include slanty(0deg);
+    }
+    10% {
+        @include slanty(100deg);
+    }
+
+    20% {
+        @include slanty(50deg);
+    }
+
+    30% {
+        @include slanty(96deg);
+    }
+
+    40% {
+        @include slanty(60deg);
+    }
+
+    50% {
+        @include slanty(93deg);
+    }
+
+    60% {
+        @include slanty(73deg);
+    }
+
+    74% {
+        @include slanty(89deg);
+    }
+
+    86% {
+        @include slanty(80deg);
+    }
+
+    100% {
+        @include slanty(88deg);
+    }
+}
+
+.so-spacious {
+    letter-spacing: 1em;
+}
+
+.so-fast {
+    display: inline-block;
+    transform: skewX(15deg);
+}
+
+.so-heavy {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 1px 3px 2px, -1px 3px 2px;
+}
